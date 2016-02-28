@@ -31,11 +31,7 @@ Amount = React.createClass({
           <input type="text" className="col s8 m8 l3 large-input-text"/>
           <span className="col s4 m4 l2">USD</span>
         </div>
-        <div className="row">
-          <div className="column column-20 column-offset-80">
-            <a type="submit" href="/target">Next</a>
-          </div>
-        </div>
+        <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>
       </form>
     );
   }
@@ -51,11 +47,7 @@ Target = React.createClass({
           <input type="text" className="col s8 m8 l6 large-input-text"/>
           <span className="col s4 m2 l4">EGP</span>
         </div>
-        <div className="row">
-          <div className="column column-20 column-offset-80">
-            <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>
-          </div>
-        </div>
+        <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>
       </form>
     );
   }
