@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+/* Global */
+body {
+  font-family: 'Kurale', serif;
+}
 
 /* First Page */
 .centered-text {
@@ -24,12 +28,12 @@ input.dashed {
 }
 
 .large-text {
-  font-size: 3em;
+  font-size: 2.4em;
 }
 
 .row input.large-input-text {
-  height: 74px;
-  font-size: 2em
+  height: 60px;
+  font-size: 1.2em;
 }
 
 /* Or - Spacer */

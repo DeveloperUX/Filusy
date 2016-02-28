@@ -11,6 +11,7 @@ Meteor.startup(function() {
         <IndexRoute component={Intention} />
         <Route path="login" component={Login} />
         <Route path="amount" component={Amount} />
+        <Route path="target" component={Target} />
       </Route>
     </Router>
   ), document.getElementById("app"));

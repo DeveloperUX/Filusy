@@ -25,11 +25,18 @@ Amount = React.createClass({
 
   render() {
     return (
-      <div className="row">
-        <div className="column column-60 large-text">How much do you have?</div>
-        <input type="text" className="column column-20 large-input-text"/>
-        <span className="column column-10 large-text">USD</span>
-      </div>
+      <form className="app-box" action="/target">
+        <div className="row large-text">
+          <div className="col s12 m12 l7 ">How much would you like to sell?</div>
+          <input type="text" className="col s8 m8 l3 large-input-text"/>
+          <span className="col s4 m4 l2">USD</span>
+        </div>
+        <div className="row">
+          <div className="column column-20 column-offset-80">
+            <a type="submit" href="/target">Next</a>
+          </div>
+        </div>
+      </form>
     );
   }
 });
@@ -38,11 +45,18 @@ Target = React.createClass({
 
   render() {
     return (
-      <div className="big-text">
-        <a className="large-link" href="/Map">Buying?</a>
-        <span className="vertical-seperator"></span>
-        <a className="large-link" href="/Amount">Selling?</a>
-      </div>
+      <form className="app-box" action="/target">
+        <div className="row large-text">
+          <div className="col s12 m12 l12">What is the <u>minimum</u> you will accept per Dollar?</div>
+          <input type="text" className="col s8 m8 l6 large-input-text"/>
+          <span className="col s4 m2 l4">EGP</span>
+        </div>
+        <div className="row">
+          <div className="column column-20 column-offset-80">
+            <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>
+          </div>
+        </div>
+      </form>
     );
   }
 });
