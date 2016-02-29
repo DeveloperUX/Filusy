@@ -1,5 +1,6 @@
 
 const { Link, State, RouteHandler, History } = ReactRouter;
+const { createStore } = Redux
 
 Intention = React.createClass({
 
@@ -9,6 +10,17 @@ Intention = React.createClass({
   // contextTypes: {
   //   router: React.PropTypes.object.isRequired
   // },
+
+
+  propTypes: {
+    // This component gets the task to display through a React prop.
+    // We can use propTypes to indicate it is required
+    GlobalState: React.PropTypes.object
+  },
+
+  componentDidMount() {
+    console.log("STORE: ", this.props.route.GlobalState);
+  },
 
   render() {
     return (

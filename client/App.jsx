@@ -4,6 +4,8 @@ App = React.createClass({
 
   mixins: [ReactMeteorData],
 
+  
+
   componentDidMount() {
     var SEP = '|', ua, opera, ie;
     /*
