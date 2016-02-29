@@ -73,10 +73,10 @@ Target = React.createClass({
 
     let curSale = Reserves.findOne({id: window.curUser.deviceId});
 
-    let price = ReactDOM.findDOMNode(this.refs.price).value.trim();
-    curSale["price"] = this.refs.price;
+    let price = this.refs.price.value.trim();
+    curSale["price"] = price;
 
-    Reserves.update({id: window.curUser.deviceId}, curSale);
+    Reserves.update(curSale._id, curSale);
 
     this.props.history.pushState(null, '/bids');
   },
@@ -86,7 +86,7 @@ Target = React.createClass({
       <form className="app-box" onSubmit={this.setPrice}>
         <div className="row large-text">
           <div className="col s12 m12 l12">What is the <u>minimum</u> you will accept per Dollar?</div>
-          <input type="text" refs="price" className="col s8 m8 l6 large-input-text"/>
+          <input type="text" ref="price" className="col s8 m8 l6 large-input-text"/>
           <span className="col s4 m2 l4">EGP</span>
         </div>
         <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>

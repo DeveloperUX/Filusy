@@ -40,7 +40,7 @@ Meteor.startup(function() {
   ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Intention} GlobalState={GlobalState}/>
+        <IndexRoute component={Intention} GlobalState={GlobalState} />
         <Route path="login" component={Login} />
         <Route path="amount" component={Amount} />
         <Route path="target" component={Target} />
