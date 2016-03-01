@@ -4,6 +4,19 @@ body {
   font-family: 'Kurale', serif;
 }
 
+/* Navigation bar */
+nav .brand-logo {
+  padding: 0 15px;
+}
+
+/* Listings page */
+div.map-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
 /* First Page */
 .centered-text {
   text-align: center;
@@ -33,7 +46,7 @@ input.dashed {
 
 .row input.large-input-text {
   height: 60px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* Or - Spacer */

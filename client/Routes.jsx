@@ -45,6 +45,7 @@ Meteor.startup(function() {
         <Route path="amount" component={Amount} />
         <Route path="target" component={Target} />
         <Route path="bids" component={Bids} />
+        <Route path="listings" component={Listings} />
       </Route>
     </Router>
   ), document.getElementById("app"));

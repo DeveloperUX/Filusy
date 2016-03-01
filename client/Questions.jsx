@@ -1,6 +1,6 @@
 
 const { Link, State, RouteHandler, History } = ReactRouter;
-const { createStore } = Redux
+const { createStore } = Redux;
 
 Intention = React.createClass({
 
@@ -25,15 +25,15 @@ Intention = React.createClass({
   render() {
     return (
       <div className="centered-text">
-        <a className="large-link" href="/map">
-          <h1><u>buy</u> dollars</h1>
+        <a className="large-link" href="/listings">
+          <h1><span className="blue-text text-darken-2">Buy</span> dollars</h1>
         </a>
         <div className="or-spacer">
           <div className="mask"></div>
           <span><i>or</i></span>
         </div>
         <a className="large-link" href="/amount">
-          <h1><u>sell</u> dollars</h1>
+          <h1><span className="orange-text text-darken-2">Sell</span> dollars</h1>
         </a>
       </div>
     );
@@ -57,7 +57,7 @@ Amount = React.createClass({
       <form className="app-box" onSubmit={this.setQuantity}>
         <div className="row large-text">
           <div className="col s12 m12 l7 ">How much would you like to sell?</div>
-          <input type="text" ref="quantity" className="col s8 m8 l3 large-input-text"/>
+          <input type="number" pattern="\d*" oninput="this.value=this.value.replace(/[^0-9]/g,'');" ref="quantity" className="col s8 m8 l3 large-input-text"/>
           <span className="col s4 m4 l2">USD</span>
         </div>
         <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>
@@ -86,7 +86,7 @@ Target = React.createClass({
       <form className="app-box" onSubmit={this.setPrice}>
         <div className="row large-text">
           <div className="col s12 m12 l12">What is the <u>minimum</u> you will accept per Dollar?</div>
-          <input type="text" ref="price" className="col s8 m8 l6 large-input-text"/>
+          <input type="text" ref="price" pattern="^\d+(?:\.\d{0,2})$" className="col s8 m8 l6 large-input-text"/>
           <span className="col s4 m2 l4">EGP</span>
         </div>
         <button className="waves-effect waves-teal btn-flat" type="submit">Next</button>

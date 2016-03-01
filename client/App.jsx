@@ -4,7 +4,7 @@ App = React.createClass({
 
   mixins: [ReactMeteorData],
 
-  
+
 
   componentDidMount() {
     var SEP = '|', ua, opera, ie;
@@ -173,6 +173,7 @@ App = React.createClass({
   render() {
     return (
       <div className="page-wrapper">
+        <Navbar></Navbar>
         <main className="container">
           {this.props.children}
         </main>
