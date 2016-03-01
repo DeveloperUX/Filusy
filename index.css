@@ -4,6 +4,14 @@ body {
   font-family: 'Kurale', serif;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
 /* Navigation bar */
 nav .brand-logo {
   padding: 0 15px;
@@ -11,11 +19,12 @@ nav .brand-logo {
 
 /* Listings page */
 div.map-container {
-  position: fixed;
   left: 0;
-  right: 0;
+  top: 0;
   height: 100%;
-  z-index: -1;
+  width: 100%;
+  position: absolute !important;
+  margin-top: 62px;;
 }
 /* First Page */
 .centered-text {

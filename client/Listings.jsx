@@ -30,8 +30,16 @@ Listings = React.createClass({
   },
   _mapOptions() {
     return {
-      center: new google.maps.LatLng(-37.8136, 144.9631),
-      zoom: 8
+      center: new google.maps.LatLng(30.0500, 31.2333),
+      zoom: 12,
+      maxZoom: 14,
+      minZoom: 8,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false
     };
   },
   render() {
