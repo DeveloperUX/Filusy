@@ -1,4 +1,5 @@
 {
   "arabic-personal-names": "1.0.4",
-  "fingerprintjs2": "1.1.0"
+  "fingerprintjs2": "1.1.0",
+  "react-number-input": "1.14.7"
 }
