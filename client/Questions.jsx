@@ -24,7 +24,7 @@ Intention = React.createClass({
 
   render() {
     return (
-      <div className="centered-text">
+      <div className="centered-text container">
         <a className="large-link" href="/listings">
           <h1><span className="blue-text text-darken-2">Buy</span> dollars</h1>
         </a>
@@ -54,7 +54,7 @@ Amount = React.createClass({
 
   render() {
     return (
-      <form className="app-box" onSubmit={this.setQuantity}>
+      <form className="app-box container" onSubmit={this.setQuantity}>
         <div className="row large-text">
           <div className="col s12 m12 l7 ">How much would you like to sell?</div>
           <input type="number" pattern="\d*" oninput="this.value=this.value.replace(/[^0-9]/g,'');" ref="quantity" className="col s8 m8 l3 large-input-text"/>
@@ -83,7 +83,7 @@ Target = React.createClass({
 
   render() {
     return (
-      <form className="app-box" onSubmit={this.setPrice}>
+      <form className="app-box container" onSubmit={this.setPrice}>
         <div className="row large-text">
           <div className="col s12 m12 l12">What is the <u>minimum</u> you will accept per Dollar?</div>
           <input type="text" ref="price" pattern="^\d+(?:\.\d{0,2})$" className="col s8 m8 l6 large-input-text"/>

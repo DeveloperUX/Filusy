@@ -5,7 +5,7 @@ Bids = React.createClass({
 
   render() {
     return (
-      <div className="bids-wrapper">
+      <div className="bids-wrapper container">
         <h1>
           Incoming Bids
         </h1>
