@@ -3,7 +3,29 @@ Listings = React.createClass({
   mixins: [ReactMeteorData],
   componentDidMount() {
     GoogleMaps.load();
+
+    var slider = document.getElementById('test5');
+    noUiSlider.create(slider, {
+     start: [20, 80],
+     connect: true,
+     step: 1,
+     range: {
+       'min': 0,
+       'max': 100
+     },
+     format: wNumb({
+       decimals: 0
+     })
+    });
+
+
+    // $(document).ready(function() {
+        $('select').material_select();
+    // });
+    // $(ReactDOM.findDOMNode(this.refs.select)).material_select();
+
   },
+
   getMeteorData() {
     return {
       loaded: GoogleMaps.loaded(),
@@ -44,17 +66,30 @@ Listings = React.createClass({
       fullscreenControl: false
     };
   },
+
   render() {
     if (this.data.loaded) {
       return (
         <div className="map-wrapper">
-          <div className="floating-filter">
-            <form>
-              <label>Amount</label>
-              <input type="text"></input>
-              <label>Price</label>
-              <input type="text"></input>
-            </form>
+          <div className="row ontop">
+            <div className="col s12 m5">
+              <div className="card-panel white">
+                <form action="#">
+                  <p className="range-field">
+                    <input type="range" id="test5" min="0" max="100" />
+                  </p>
+                  <div className="input-field col s12">
+                    <select id={this.props.var} value="1" defaultValue="1">
+                      <option value="0" disabled>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Materialize Select</label>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
           <GoogleMap name="ListingsMap" options={this.data.mapOptions} />
         </div>

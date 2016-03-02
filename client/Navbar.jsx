@@ -1,7 +1,7 @@
 Navbar = React.createClass({
   render() {
     return (
-      <nav className="white" role="navigation">
+      <nav className="white ontop" role="navigation">
         <div className="nav-wrapper">
           <a href={'/'} className="brand-logo orange-text darken-4">
             Filus<span className="lime-text accent-4">na</span>
