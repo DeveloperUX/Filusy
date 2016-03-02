@@ -1,4 +1,4 @@
-/* CSS declarations go here */
+
 /* Global */
 body {
   font-family: 'Kurale', serif;
@@ -10,6 +10,11 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px
+}
+
+.ontop {
+  position: relative;
+  z-index: 3;
 }
 
 /* Navigation bar */
@@ -24,7 +29,7 @@ div.map-container {
   height: 100%;
   width: 100%;
   position: absolute !important;
-  margin-top: 62px;;
+  /* margin-top: 62px; Won't need this , we'll just cover the top part */
 }
 /* First Page */
 .centered-text {
