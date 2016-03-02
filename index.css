@@ -31,6 +31,11 @@ div.map-container {
   position: absolute !important;
   /* margin-top: 62px; Won't need this , we'll just cover the top part */
 }
+
+div.filter-panel {
+  display: inline-block;
+}
+
 /* First Page */
 .centered-text {
   text-align: center;

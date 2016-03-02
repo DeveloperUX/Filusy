@@ -1,29 +1,26 @@
 
 Listings = React.createClass({
+
   mixins: [ReactMeteorData],
+
+  getInitialState() {
+    return {maxPrice: 9.5};
+  },
+
   componentDidMount() {
     GoogleMaps.load();
+  },
 
-    var slider = document.getElementById('test5');
-    noUiSlider.create(slider, {
-     start: [20, 80],
-     connect: true,
-     step: 1,
-     range: {
-       'min': 0,
-       'max': 100
-     },
-     format: wNumb({
-       decimals: 0
-     })
-    });
+  componentDidUpdate() {
 
+    var el = this.refs.rangeslider;
 
-    // $(document).ready(function() {
-        $('select').material_select();
-    // });
-    // $(ReactDOM.findDOMNode(this.refs.select)).material_select();
+    $(this.refs.amountSelector).material_select();
 
+  },
+
+  changePrice(event) {
+    this.setState({maxPrice: event.target.value});
   },
 
   getMeteorData() {
@@ -72,21 +69,35 @@ Listings = React.createClass({
       return (
         <div className="map-wrapper">
           <div className="row ontop">
-            <div className="col s12 m5">
-              <div className="card-panel white">
+            <div className="col s12 m6 l4">
+              <div className="card-panel white filter-panel">
                 <form action="#">
-                  <p className="range-field">
-                    <input type="range" id="test5" min="0" max="100" />
-                  </p>
                   <div className="input-field col s12">
-                    <select id={this.props.var} value="1" defaultValue="1">
-                      <option value="0" disabled>Choose your option</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                    <select id="amount-selector" ref="amountSelector" defaultValue="0" >
+                      <option value="0" disabled>Atleast This Amount</option>
+                      <option value="100">$100</option>
+                      <option value="500">$500</option>
+                      <option value="1000">$1000</option>
+                      <option value="5000">$5000</option>
+                      <option value="10000">$10000</option>
+                      <option value="50000">$50000</option>
                     </select>
-                    <label>Materialize Select</label>
+                    <label>Minimum Amount</label>
                   </div>
+                  <p className="input-field col s12 range-field">
+                    <input type="range"
+                      ref="priceSelector" id="priceSelector"
+                      min="8" max="12" step="0.1"
+                      value={this.state.maxPrice}
+                      onChange={this.changePrice} />
+                    <span className="row">
+                      <span className="col s4 left-align">$8.00</span>
+                      <span className="col s4 center-align">
+                        {"$" + parseFloat(this.state.maxPrice).toFixed(2)}
+                      </span>
+                      <span className="col s4 right-align">$12.00</span>
+                    </span>
+                  </p>
                 </form>
               </div>
             </div>
