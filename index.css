@@ -12,6 +12,10 @@ body {
   padding: 0px
 }
 
+.filter-box {
+  float: left;
+}
+
 .ontop {
   position: relative;
   z-index: 3;
