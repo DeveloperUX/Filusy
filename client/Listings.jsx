@@ -4,7 +4,7 @@ Listings = React.createClass({
   mixins: [ReactMeteorData],
 
   getInitialState() {
-    return {maxPrice: 9.5};
+    return {maxPrice: 10.5};
   },
 
   componentDidMount() {
@@ -124,6 +124,9 @@ GoogleMap = React.createClass({
 
     GoogleMaps.ready(this.props.name, function(map) {
       var marker = new google.maps.Marker({
+        icon: {
+          url: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Marker-Outside-Chartreuse-icon.png'
+        },
         position: map.options.center,
         map: map.instance
       });
