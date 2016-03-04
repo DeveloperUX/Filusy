@@ -71,7 +71,7 @@ Listings = React.createClass({
           <div className="filter-box ontop">
             <div className="col s12 m6 l4">
               <div className="card-panel white filter-panel">
-                <form action="#">
+                <form action="#" className="filter-form">
                   <div className="input-field col s12">
                     <select id="amount-selector" ref="amountSelector" defaultValue="0" >
                       <option value="0" disabled>Atleast This Amount</option>

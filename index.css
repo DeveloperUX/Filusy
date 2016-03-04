@@ -16,6 +16,10 @@ body {
   float: left;
 }
 
+.filter-form {
+  min-width: 340px;
+}
+
 .ontop {
   position: relative;
   z-index: 3;
