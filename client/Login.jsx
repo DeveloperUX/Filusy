@@ -1,4 +1,6 @@
-const { Link, State, RouteHandler } = ReactRouter;
+// const { Link, State, RouteHandler } = ReactRouter;
+import React from 'react';
+import ReactRouter from 'react-router';
 
 Login = React.createClass({
 

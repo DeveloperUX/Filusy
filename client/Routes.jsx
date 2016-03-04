@@ -1,4 +1,7 @@
 const {Router, Route, IndexRoute, Link, history} = ReactRouter;
+import React from 'react';
+import ReactRouter from 'react-router';
+import ReactDOM from 'react-dom';
 
 // A history object must be created to maintain the history for our router
 const browserHistory = history.createHistory();

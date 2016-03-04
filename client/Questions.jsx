@@ -1,6 +1,8 @@
 
-const { Link, State, RouteHandler, History } = ReactRouter;
+// const { Link, State, RouteHandler, History } = ReactRouter;
 const { createStore } = Redux;
+import React from 'react';
+import ReactRouter from 'react-router';
 
 Intention = React.createClass({
 

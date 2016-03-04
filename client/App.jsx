@@ -1,4 +1,7 @@
-const { Link, State, RouteHandler } = ReactRouter;
+// const { Link, State, RouteHandler } = ReactRouter;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactRouter from 'react-router';
 
 App = React.createClass({
 

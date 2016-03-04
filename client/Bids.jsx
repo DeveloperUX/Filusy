@@ -1,4 +1,5 @@
-
+import React from 'react';
+import ReactRouter from 'react-router';
 
 Bids = React.createClass({
 

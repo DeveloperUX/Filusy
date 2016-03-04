@@ -1,5 +1,8 @@
+import React from 'react';
+import ReactRouter from 'react-router';
 
-Listings = React.createClass({
+
+class Listings extends React.Component {
 
   mixins: [ReactMeteorData],
 
@@ -108,7 +111,8 @@ Listings = React.createClass({
     }
     return <div>Loading map...</div>;
   }
-});
+};
+
 
 GoogleMap = React.createClass({
   propTypes: {

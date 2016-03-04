@@ -1,4 +1,7 @@
-Navbar = React.createClass({
+import React from 'react';
+import ReactRouter from 'react-router';
+
+class Navbar extends React.Component {
   render() {
     return (
       <nav className="white ontop" role="navigation">
@@ -13,4 +16,4 @@ Navbar = React.createClass({
       </nav>
     );
   }
-})
+};
